@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Edit message{% endblock title %}
+
+{% block page_content %}
+
+<h2> {{message.author_name}}</h2>
+<p>{{message.created}}</p>
+<p></p>
+<form action="/message/{{message.key.id()}}/edit" method="post">
+<textarea rows="10" cols="35" name="new_message">
+{{message.message}}
+</textarea> </br>
+<button type="submit">Save</button>
+</form>
+{% endblock page_content %}

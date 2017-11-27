@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Message{% endblock title %}
+
+{% block page_content %}
+
+<h2>{{message.author_name}}</h2>
+<p>{{message.message}}</p>
+<p>{{message.created.strftime('%d %B %Y at %H:%M')}}</p>
+
+<a href="/message/{{message.key.id()}}/edit">Edit</a>
+<a href="/message/{{message.key.id()}}/delete">Delete</a>
+{% endblock page_content %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Are you sure?{% endblock title %}
+
+{% block page_content %}
+
+<p>Are you sure you want to recover this message?</p>
+<form action="/message/{{message_id}}/recover" method="post">
+<button type="submit">Yes</button>
+</form>
+
+<a href="/message/{{message_id}}/adminmessage">Back</a>
+{% endblock page_content %}
